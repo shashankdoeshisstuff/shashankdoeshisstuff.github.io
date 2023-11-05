@@ -1,8 +1,8 @@
-const jsonServer = require("json-server"); // importimg json-server library
+const jsonServer = require("json-server"); // importing json-server library
 const server = jsonServer.create();
-const route = jsonServer.router("./json-files/little_lemon_database.json");
-const middleares = jsonServer.defaults();
-const port = process.env.PORT || 8080; // choose port from here
+const router = jsonServer.router("little_lemon_database.json");
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 8080; //  chose port from here like 8080, 3001
 
 server.use(middlewares);
 server.use(router);
